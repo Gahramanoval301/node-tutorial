@@ -1,0 +1,38 @@
+Event-driven Programming
+Used Heavily in Node.js
+
+->In Browser, events like this: 
+user click on button, user hovers over the link
+->In Server-side
+we listen for specific events and register functions that will execute in response to tthose events,
+So once, our event takes place callback function fires
+
+//FREECODECAMP
+const customEmitter = new EventEmitter(); //we create an instance from the events module
+
+//we have 2  methods in events
+// on - listen for an event
+// emit - emit an event
+
+//1st parameter - event
+//2nd parameter - callback which is consist of your actions
+customEmitter.on('response', ()=>{ //add event listener
+console.log(`data received`);
+})
+customEmitter.emit('response') //call it/ emit it
+
+AWARE!
+1.
+WHEN YOU HAVE more than one respponse event and then you emit it once, 
+all of them will be emitted
+
+2. the order is matter  on -> emit , not!!! emit -> on 
+We should first listen for event and then we emit it
+
+3.
+we can pass the arguments when we're omitting the event 
+if i write customEmitter.emit('response', 'john', 26),
+then before it in 'on' method, we take them as arguments from the callback :
+customEmiiter.on('response', (name, id)=>[
+  //your code...
+])
