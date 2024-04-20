@@ -2,14 +2,17 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "It contains node topics and codes step by step",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start":"node server",
+    "dev": "nodemon server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^3.6.0",
     "lodash": "^4.17.21",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
   }
 }
