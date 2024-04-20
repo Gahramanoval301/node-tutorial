@@ -87,14 +87,6 @@ const server = http.createServer((req, res) => {
                     ? path.join(__dirname, 'views', req.url)
                     : path.join(__dirname, req.url);
 
-    if (!filePath.endsWith('\\') && contentType === 'text/html') {
-        filePath = path.join(__dirname, 'views', req.url, 'index.html');
-        console.log(filePath,'new');
-    }
-
-    console.log(req.url, 'req0url');
-    console.log((filePath), 'filepath');
-    console.log(path.join(__dirname, 'views', req.url, 'index.html'), 'log');
     //makes .html extension not required in the browser
     if (!extension && req.url.slice(-1) !== '/')
         filePath += '.html'
@@ -105,8 +97,6 @@ const server = http.createServer((req, res) => {
         //serve the file
         // console.log(path.parse(filePath), '200');
         serveFile(filePath, contentType, res);
-
-
     } else {
         // console.log(path.parse(filePath), '404');
         switch (path.parse(filePath).base) {
