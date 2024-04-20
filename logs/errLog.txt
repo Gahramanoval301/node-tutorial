@@ -1,0 +1,2 @@
+2024-04-20	5cd9c6f9-63bf-42c4-9bfa-fc9a8552e823	TypeError	fsPromises.readFil is not a function
+2024-04-20	c3fa8360-0ccf-49ab-b927-769ccb9add8d	Error	EISDIR: illegal operation on a directory, read
