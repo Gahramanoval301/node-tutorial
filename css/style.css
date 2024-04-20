@@ -1,0 +1,11 @@
+.index{
+    color: red;
+}
+h1{
+    font-weight: 900;
+    color: green;
+    font-size: 50px;
+}
+img{
+    border: 5px solid green;
+}
